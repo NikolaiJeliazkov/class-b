@@ -4,7 +4,7 @@
 return array(
 	'PostPreviewSize' => 200,
 	// this is displayed in the header section
-	'appName'=>'III Б клас',
+	'appName'=>'IV Б клас',
 	// this is used in error pages
 	'adminEmail'=>'"IV Б клас" <admin@class-b.net>',
 	// number of posts displayed per page
