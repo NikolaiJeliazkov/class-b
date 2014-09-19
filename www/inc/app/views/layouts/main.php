@@ -22,7 +22,7 @@
 	<div id="header">
 		<div id="logo">
 			<?php echo CHtml::encode(Yii::app()->params['appName']); ?>
-			<div><a href="http://www.41ou.com/">41 ОУ "Св. Патриарх Евтимий"</a></div>
+			<div><?php echo Yii::app()->params['schoolHtml']; ?></div>
 		</div>
 		<div id="usermenu">
 <?php
@@ -71,19 +71,11 @@ if(isset($this->breadcrumbs) && count($this->breadcrumbs)>0) {
 	<div class="clear"></div>
 
 	<div id="footer">
-		Copyright &copy; <?php echo date('Y'); ?> by <?php echo CHtml::encode(Yii::app()->name); ?>.<br/>
+		<?php echo Yii::app()->params['copyrightInfo']; ?>.<br/>
 		All Rights Reserved.<br/>
 	</div><!-- footer -->
 
 </div><!-- page -->
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-51466807-1', 'class-b.net');
-  ga('send', 'pageview');
-</script>
+<?php echo Yii::app()->params['analyticsScript']; ?>
 </body>
 </html>

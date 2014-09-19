@@ -265,9 +265,9 @@ from
 	messages m
 	inner join messagesto mt on m.messageId=mt.messageId
 where
-	mt.messageTo=".Yii::app()->user->getId()." and mt.messageStatus=0
+	mt.messageTo=? and mt.messageStatus=0
 ";
-		$count=Yii::app()->db->createCommand($sql)->queryScalar();
+		$count=Yii::app()->db->createCommand($sql)->queryScalar(array(Yii::app()->user->getId()));
 		} catch (Exception $e) {
 			$count = 0;
 		}
