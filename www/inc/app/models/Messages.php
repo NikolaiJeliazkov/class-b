@@ -247,7 +247,7 @@ where
 
 		$emailSubject = "=?UTF-8?B?" . base64_encode(Yii::app()->params['appName'].' - '.$this->messageSubject) . "?=";
 		$emailText = "Получихте ново съобщение от {$utext}, което можете да прочетете на адрес\n";
-		$emailText.= "http://class-b.net/messages/inbox/{$mid}\n\n";
+		$emailText.= Yii::app()->params['appUrl']."/messages/inbox/{$mid}\n\n";
 		$emailText.= "ТОВА Е АВТОМАТИЧНО ГЕНЕРИРАНО СЪОБЩЕНИЕ. МОЛЯ, НЕ ОТГОВАРЯЙТЕ!\n\n";
 
 		foreach ($all as $r) {

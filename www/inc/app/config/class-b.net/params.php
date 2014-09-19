@@ -5,9 +5,10 @@ return array(
 	'PostPreviewSize' => 200,
 	// this is displayed in the header section
 	'appName'=>'I Б клас',
+	'appUrl'=>'http://class-b.net',
 	// this is used in error pages
 	'adminEmail'=>'"I Б клас" <admin@class-b.net>',
-    'schoolHtml'=>'<a href="http://www.41ou.com/">41 ОУ "Св. Патриарх Евтимий"</a>',
+	'schoolHtml'=>'<a href="http://www.41ou.com/">41 ОУ "Св. Патриарх Евтимий"</a>',
 	// number of posts displayed per page
 	'postsPerPage'=>5,
 	// maximum number of comments that can be displayed in recent posts portlet
@@ -18,7 +19,7 @@ return array(
 	'commentNeedApproval'=>true,
 	// the copyright information displayed in the footer section
 	'copyrightInfo'=>'Copyright &copy; 2009 by to4ka.net',
-    'analyticsScript' => "
+	'analyticsScript' => "
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

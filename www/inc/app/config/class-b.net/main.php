@@ -10,7 +10,7 @@ $params = require(dirname(__FILE__).'/params.php');
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'..',
 // 	'runtimePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-    'name'=>$params['appName'],
+	'name'=>$params['appName'],
 	'language' => 'bg',
 
 	// preloading 'log' component
