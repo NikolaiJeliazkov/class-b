@@ -37,8 +37,8 @@
 		</buildCommand>
 	</buildSpec>
 	<natures>
-		<nature>org.maziarz.yiiclipse.nature</nature>
 		<nature>org.eclipse.php.core.PHPNature</nature>
+		<nature>org.maziarz.yiiclipse.nature</nature>
 		<nature>org.eclipse.wst.common.project.facet.core.nature</nature>
 		<nature>com.dubture.composer.core.composerNature</nature>
 		<nature>org.eclipse.wst.jsdt.core.jsNature</nature>
