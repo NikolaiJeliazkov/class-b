@@ -85,6 +85,7 @@ class MessagesController extends Controller
 		}
 		if(isset($_POST['Messages'])) {
 			$model->attributes=$_POST['Messages'];
+			@Yii::trace($_POST,'vardump');
 			if ($model->validate()) {
 				if ($model->newMessageSave()) {
 					Yii::app()->user->setFlash('info', 'Съобщението е изпратено');

@@ -96,6 +96,13 @@ return array(
 // 						'logVars' => array(),
 // 					),
 				),
+				array(
+						'class'=>'CWebLogRoute',
+						'showInFireBug'=>true,
+						'levels'=>'trace',
+						'categories'=>'vardump',//,system.db.CDbCommand',
+				),
+
 				// uncomment the following to show log messages on web pages
 				/*
 				array(

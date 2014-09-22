@@ -132,6 +132,14 @@ class Users extends CActiveRecord
 		));
 	}
 
+	public function delete()
+	{
+		if(!$this->getIsNewRecord() && $this->userId==1) {
+			throw new CDbException(Yii::t('yii','User account cannot be deleted because it is an administrator.'));
+		}
+		return parent::delete();
+	}
+
 	/**
 	* perform one-way encryption on the password before we store it in
 	the database

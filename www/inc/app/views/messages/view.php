@@ -28,7 +28,7 @@ $this->widget('zii.widgets.CDetailView', array(
 		(($model->getScenario()=='inbox')?'messageFromStudent':'messageToStudent'),
 		'messageDate',
 		'messageSubject',
-		'messageText:ntext',
+		'messageText:html',
 	),
 ));
 

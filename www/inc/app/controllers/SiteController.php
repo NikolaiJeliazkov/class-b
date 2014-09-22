@@ -5,21 +5,21 @@ class SiteController extends Controller
 	/**
 	 * Declares class-based actions.
 	 */
-	public function actions()
-	{
-		return array(
-			// captcha action renders the CAPTCHA image displayed on the contact page
-			'captcha'=>array(
-				'class'=>'CCaptchaAction',
-				'backColor'=>0xFFFFFF,
-			),
-			// page action renders "static" pages stored under 'protected/views/site/pages'
-			// They can be accessed via: index.php?r=site/page&view=FileName
-			'page'=>array(
-				'class'=>'CViewAction',
-			),
-		);
-	}
+// 	public function actions()
+// 	{
+// 		return array(
+// 			// captcha action renders the CAPTCHA image displayed on the contact page
+// 			'captcha'=>array(
+// 				'class'=>'CCaptchaAction',
+// 				'backColor'=>0xFFFFFF,
+// 			),
+// 			// page action renders "static" pages stored under 'protected/views/site/pages'
+// 			// They can be accessed via: index.php?r=site/page&view=FileName
+// 			'page'=>array(
+// 				'class'=>'CViewAction',
+// 			),
+// 		);
+// 	}
 
 	/**
 	 * This is the default 'index' action that is invoked
@@ -31,6 +31,19 @@ class SiteController extends Controller
 		// using the default layout 'protected/views/layouts/main.php'
 		$this->render('index');
 	}
+
+	public function actionPage($view)
+	{
+		$model = Pages::model()->findByPk($view);
+		if ($model === null) {
+			throw new CHttpException(404,'The requested page does not exist.');
+		}
+		$this->pageTitle = $model->pageTitle;
+		$this->metaKeywords = $model->pageTags;
+		$this->metaDescription = $model->pageDesc;
+		$this->render('page', array('model'=>$model));
+	}
+
 
 	/**
 	 * This is the action to handle external exceptions.

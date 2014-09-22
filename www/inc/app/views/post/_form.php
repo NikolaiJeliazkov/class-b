@@ -11,14 +11,14 @@ $form = $this->beginWidget('bootstrap.widgets.BootActiveForm', array(
 	"config"=>array('skin'=>'v2', 'toolbarStartupExpanded' => false),
 	"height"=>'200px',
 	"width"=>'100%',
-	"filespath"=>Yii::app()->basePath."/../files/",
+	"filespath"=>$_SERVER['DOCUMENT_ROOT']."/files/",
 	"filesurl"=>Yii::app()->baseUrl."/files/",
 )); ?><br/>
 <?php echo $form->textCKEditor($model, 'postText', array(), array(
 	"config"=>array('skin'=>'v2', 'toolbarStartupExpanded' => true),
 	"height"=>'200px',
 	"width"=>'100%',
-	"filespath"=>Yii::app()->basePath."/../files/",
+	"filespath"=>$_SERVER['DOCUMENT_ROOT']."/files/",
 	"filesurl"=>Yii::app()->baseUrl."/files/",
 )); ?><br/>
 <?php echo $form->textAutoCompleteRow($model, 'postTags', array('class'=>'span5'), array(

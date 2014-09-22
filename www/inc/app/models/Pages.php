@@ -5,16 +5,10 @@
  *
  * The followings are the available columns in table 'pages':
  * @property string $pageId
- * @property string $pageParent
- * @property string $pageStatus
- * @property string $pageTitile
+ * @property string $pageTitle
  * @property string $pageDesc
  * @property string $pageText
  * @property string $pageTags
- *
- * The followings are the available model relations:
- * @property Pages $pageParent0
- * @property Pages[] $pages
  */
 class Pages extends CActiveRecord
 {
@@ -44,13 +38,12 @@ class Pages extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('pageTitile', 'required'),
-			array('pageParent', 'length', 'max'=>20),
-			array('pageStatus', 'length', 'max'=>10),
+			array('pageId, pageTitle', 'required'),
+			array('pageId', 'length', 'max'=>255),
 			array('pageDesc, pageText, pageTags', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('pageId, pageParent, pageStatus, pageTitile, pageDesc, pageText, pageTags', 'safe', 'on'=>'search'),
+			array('pageId, pageTitle, pageDesc, pageText, pageTags', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -62,8 +55,6 @@ class Pages extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'pageParent0' => array(self::BELONGS_TO, 'Pages', 'pageParent'),
-			'pages' => array(self::HAS_MANY, 'Pages', 'pageParent'),
 		);
 	}
 
@@ -74,9 +65,7 @@ class Pages extends CActiveRecord
 	{
 		return array(
 			'pageId' => 'Page',
-			'pageParent' => 'Page Parent',
-			'pageStatus' => 'Page Status',
-			'pageTitile' => 'Page Titile',
+			'pageTitle' => 'Page Titile',
 			'pageDesc' => 'Page Desc',
 			'pageText' => 'Page Text',
 			'pageTags' => 'Page Tags',
@@ -95,9 +84,7 @@ class Pages extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('pageId',$this->pageId,true);
-		$criteria->compare('pageParent',$this->pageParent,true);
-		$criteria->compare('pageStatus',$this->pageStatus,true);
-		$criteria->compare('pageTitile',$this->pageTitile,true);
+		$criteria->compare('pageTitle',$this->pageTitle,true);
 		$criteria->compare('pageDesc',$this->pageDesc,true);
 		$criteria->compare('pageText',$this->pageText,true);
 		$criteria->compare('pageTags',$this->pageTags,true);
