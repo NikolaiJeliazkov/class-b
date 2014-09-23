@@ -1,0 +1,910 @@
+2014/09/18 13:23:53 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/public_html/protected/models/Messages.php (270)
+in /home/classbn/public_html/protected/views/layouts/main.php (29)
+in /home/classbn/public_html/protected/views/layouts/column1.php (5)
+2014/09/18 13:23:54 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/public_html/protected/models/Messages.php (270)
+in /home/classbn/public_html/protected/views/layouts/main.php (29)
+in /home/classbn/public_html/protected/views/layouts/column1.php (5)
+2014/09/18 13:23:55 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/public_html/protected/models/Messages.php (270)
+in /home/classbn/public_html/protected/views/layouts/main.php (29)
+in /home/classbn/public_html/protected/views/layouts/column1.php (5)
+2014/09/18 13:23:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Gallery was not found.' in /home/classbn/public_html/protected/modules/imgManager/widgets/Gallery.php:76
+Stack trace:
+#0 /home/classbn/public_html/protected/modules/imgManager/widgets/Gallery.php(38): Gallery->loadGalModel(46)
+#1 /home/classbn/inc/framework/web/CBaseController.php(148): Gallery->init()
+#2 /home/classbn/inc/framework/web/CBaseController.php(173): CBaseController->createWidget('imgManager.widg...', Array)
+#3 /home/classbn/public_html/protected/views/gallery/index.php(2): CBaseController->widget('imgManager.widg...', Array)
+#4 /home/classbn/inc/framework/web/CBaseController.php(127): require('/home/classbn/p...')
+#5 /home/classbn/inc/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/classbn/p...', Array, true)
+#6 /home/classbn/inc/framework/web/CController.php(870): CBaseController->renderFile('/home/classbn/p...', Array, true)
+#7 /home/classbn/inc/framework/web/CController.php(783): CController->renderPartial('index', Array, true)
+#8 /home/classbn/public_html/protected/controllers/GalleryController.php(48): CController->render('index', Array)
+#9 /home/classbn/inc/framework/web/actions/CInlineAction.php(50): GalleryController->actionIndex()
+#10 /home/classbn/inc/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /home/classbn/inc/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 /home/classbn/inc/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#13 /home/classbn/inc/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 /home/classbn/inc/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 /home/classbn/inc/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 /home/classbn/inc/framework/web/CController.php(292): CFilterChain->run()
+#17 /home/classbn/inc/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /home/classbn/inc/framework/web/CWebApplication.php(276): CController->run('')
+#19 /home/classbn/inc/framework/web/CWebApplication.php(135): CWebApplication->runController('gallery')
+#20 /home/classbn/inc/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#21 /home/classbn/public_html/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/gallery
+HTTP_REFERER=http://class-b.net/site/page?view=about
+---
+2014/09/18 13:23:58 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/public_html/protected/models/Messages.php (270)
+in /home/classbn/public_html/protected/views/layouts/main.php (29)
+in /home/classbn/public_html/protected/views/layouts/column1.php (5)
+2014/09/18 13:23:59 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/public_html/protected/models/Messages.php (270)
+in /home/classbn/public_html/protected/views/layouts/main.php (29)
+in /home/classbn/public_html/protected/views/layouts/post.php (44)
+2014/09/18 13:45:36 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/post.php (44)
+2014/09/18 13:49:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Gallery was not found.' in /home/classbn/inc/a.to4ka.net/modules/imgManager/widgets/Gallery.php:76
+Stack trace:
+#0 /home/classbn/inc/a.to4ka.net/modules/imgManager/widgets/Gallery.php(38): Gallery->loadGalModel(46)
+#1 /home/classbn/inc/framework/web/CBaseController.php(148): Gallery->init()
+#2 /home/classbn/inc/framework/web/CBaseController.php(173): CBaseController->createWidget('imgManager.widg...', Array)
+#3 /home/classbn/inc/a.to4ka.net/views/gallery/index.php(2): CBaseController->widget('imgManager.widg...', Array)
+#4 /home/classbn/inc/framework/web/CBaseController.php(127): require('/home/classbn/i...')
+#5 /home/classbn/inc/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/classbn/i...', Array, true)
+#6 /home/classbn/inc/framework/web/CController.php(870): CBaseController->renderFile('/home/classbn/i...', Array, true)
+#7 /home/classbn/inc/framework/web/CController.php(783): CController->renderPartial('index', Array, true)
+#8 /home/classbn/inc/a.to4ka.net/controllers/GalleryController.php(48): CController->render('index', Array)
+#9 /home/classbn/inc/framework/web/actions/CInlineAction.php(50): GalleryController->actionIndex()
+#10 /home/classbn/inc/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /home/classbn/inc/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 /home/classbn/inc/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#13 /home/classbn/inc/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 /home/classbn/inc/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 /home/classbn/inc/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 /home/classbn/inc/framework/web/CController.php(292): CFilterChain->run()
+#17 /home/classbn/inc/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /home/classbn/inc/framework/web/CWebApplication.php(276): CController->run('')
+#19 /home/classbn/inc/framework/web/CWebApplication.php(135): CWebApplication->runController('gallery')
+#20 /home/classbn/inc/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#21 /home/classbn/public_html/a.to4ka.net/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/gallery
+HTTP_REFERER=http://a.to4ka.net/index.php
+---
+2014/09/18 13:49:28 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/column1.php (5)
+2014/09/18 13:49:29 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/column1.php (5)
+2014/09/18 13:49:30 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/column1.php (5)
+2014/09/18 13:49:31 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/post.php (44)
+2014/09/18 13:53:33 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/post.php (44)
+2014/09/18 14:07:47 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/post.php (44)
+2014/09/18 14:07:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Gallery was not found.' in /home/classbn/inc/a.to4ka.net/modules/imgManager/widgets/Gallery.php:76
+Stack trace:
+#0 /home/classbn/inc/a.to4ka.net/modules/imgManager/widgets/Gallery.php(38): Gallery->loadGalModel(46)
+#1 /home/classbn/inc/framework/web/CBaseController.php(148): Gallery->init()
+#2 /home/classbn/inc/framework/web/CBaseController.php(173): CBaseController->createWidget('imgManager.widg...', Array)
+#3 /home/classbn/inc/a.to4ka.net/views/gallery/index.php(2): CBaseController->widget('imgManager.widg...', Array)
+#4 /home/classbn/inc/framework/web/CBaseController.php(127): require('/home/classbn/i...')
+#5 /home/classbn/inc/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/classbn/i...', Array, true)
+#6 /home/classbn/inc/framework/web/CController.php(870): CBaseController->renderFile('/home/classbn/i...', Array, true)
+#7 /home/classbn/inc/framework/web/CController.php(783): CController->renderPartial('index', Array, true)
+#8 /home/classbn/inc/a.to4ka.net/controllers/GalleryController.php(48): CController->render('index', Array)
+#9 /home/classbn/inc/framework/web/actions/CInlineAction.php(50): GalleryController->actionIndex()
+#10 /home/classbn/inc/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /home/classbn/inc/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 /home/classbn/inc/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#13 /home/classbn/inc/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 /home/classbn/inc/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 /home/classbn/inc/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 /home/classbn/inc/framework/web/CController.php(292): CFilterChain->run()
+#17 /home/classbn/inc/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /home/classbn/inc/framework/web/CWebApplication.php(276): CController->run('')
+#19 /home/classbn/inc/framework/web/CWebApplication.php(135): CWebApplication->runController('gallery')
+#20 /home/classbn/inc/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#21 /home/classbn/public_html/a.to4ka.net/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/gallery
+HTTP_REFERER=http://a.to4ka.net/index.php
+---
+2014/09/18 14:07:49 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/column1.php (5)
+2014/09/18 14:07:50 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/post.php (44)
+2014/09/18 14:07:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Gallery was not found.' in /home/classbn/inc/a.to4ka.net/modules/imgManager/widgets/Gallery.php:76
+Stack trace:
+#0 /home/classbn/inc/a.to4ka.net/modules/imgManager/widgets/Gallery.php(38): Gallery->loadGalModel(46)
+#1 /home/classbn/inc/framework/web/CBaseController.php(148): Gallery->init()
+#2 /home/classbn/inc/framework/web/CBaseController.php(173): CBaseController->createWidget('imgManager.widg...', Array)
+#3 /home/classbn/inc/a.to4ka.net/views/gallery/index.php(2): CBaseController->widget('imgManager.widg...', Array)
+#4 /home/classbn/inc/framework/web/CBaseController.php(127): require('/home/classbn/i...')
+#5 /home/classbn/inc/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/classbn/i...', Array, true)
+#6 /home/classbn/inc/framework/web/CController.php(870): CBaseController->renderFile('/home/classbn/i...', Array, true)
+#7 /home/classbn/inc/framework/web/CController.php(783): CController->renderPartial('index', Array, true)
+#8 /home/classbn/inc/a.to4ka.net/controllers/GalleryController.php(48): CController->render('index', Array)
+#9 /home/classbn/inc/framework/web/actions/CInlineAction.php(50): GalleryController->actionIndex()
+#10 /home/classbn/inc/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /home/classbn/inc/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 /home/classbn/inc/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#13 /home/classbn/inc/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 /home/classbn/inc/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 /home/classbn/inc/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 /home/classbn/inc/framework/web/CController.php(292): CFilterChain->run()
+#17 /home/classbn/inc/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /home/classbn/inc/framework/web/CWebApplication.php(276): CController->run('')
+#19 /home/classbn/inc/framework/web/CWebApplication.php(135): CWebApplication->runController('gallery')
+#20 /home/classbn/inc/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#21 /home/classbn/public_html/a.to4ka.net/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/gallery
+HTTP_REFERER=http://a.to4ka.net/post/index
+---
+2014/09/18 14:07:51 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/column1.php (5)
+2014/09/18 14:12:15 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/post.php (44)
+2014/09/18 14:13:09 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/post.php (44)
+2014/09/18 14:13:10 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/post.php (44)
+2014/09/18 14:14:47 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/post.php (44)
+2014/09/18 14:14:48 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/post.php (44)
+2014/09/18 14:14:48 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/post.php (44)
+2014/09/18 14:14:49 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/post.php (44)
+2014/09/18 14:15:00 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/post.php (44)
+2014/09/18 14:15:01 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/post.php (44)
+2014/09/18 14:15:01 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/post.php (44)
+2014/09/18 14:15:01 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/post.php (44)
+2014/09/18 14:15:01 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/post.php (44)
+2014/09/18 14:15:02 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/post.php (44)
+2014/09/18 14:16:09 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/post.php (44)
+2014/09/18 14:16:53 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/post.php (44)
+2014/09/18 14:28:29 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/post.php (44)
+2014/09/18 14:29:06 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/post.php (44)
+2014/09/18 14:29:07 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/post.php (44)
+2014/09/18 14:29:08 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/post.php (44)
+2014/09/18 14:29:08 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/post.php (44)
+2014/09/18 15:00:26 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/post.php (44)
+2014/09/18 15:00:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Gallery was not found.' in /home/classbn/inc/a.to4ka.net/modules/imgManager/widgets/Gallery.php:76
+Stack trace:
+#0 /home/classbn/inc/a.to4ka.net/modules/imgManager/widgets/Gallery.php(38): Gallery->loadGalModel(46)
+#1 /home/classbn/inc/framework/web/CBaseController.php(148): Gallery->init()
+#2 /home/classbn/inc/framework/web/CBaseController.php(173): CBaseController->createWidget('imgManager.widg...', Array)
+#3 /home/classbn/inc/a.to4ka.net/views/gallery/index.php(2): CBaseController->widget('imgManager.widg...', Array)
+#4 /home/classbn/inc/framework/web/CBaseController.php(127): require('/home/classbn/i...')
+#5 /home/classbn/inc/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/classbn/i...', Array, true)
+#6 /home/classbn/inc/framework/web/CController.php(870): CBaseController->renderFile('/home/classbn/i...', Array, true)
+#7 /home/classbn/inc/framework/web/CController.php(783): CController->renderPartial('index', Array, true)
+#8 /home/classbn/inc/a.to4ka.net/controllers/GalleryController.php(48): CController->render('index', Array)
+#9 /home/classbn/inc/framework/web/actions/CInlineAction.php(50): GalleryController->actionIndex()
+#10 /home/classbn/inc/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /home/classbn/inc/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 /home/classbn/inc/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#13 /home/classbn/inc/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 /home/classbn/inc/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 /home/classbn/inc/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 /home/classbn/inc/framework/web/CController.php(292): CFilterChain->run()
+#17 /home/classbn/inc/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /home/classbn/inc/framework/web/CWebApplication.php(276): CController->run('')
+#19 /home/classbn/inc/framework/web/CWebApplication.php(135): CWebApplication->runController('gallery')
+#20 /home/classbn/inc/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#21 /home/classbn/public_html/a.to4ka.net/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/gallery
+HTTP_REFERER=http://a.to4ka.net/
+---
+2014/09/18 15:00:35 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/column1.php (5)
+2014/09/18 15:00:36 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/column1.php (5)
+2014/09/18 15:00:37 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/column1.php (5)
+2014/09/18 15:00:37 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/column1.php (5)
+2014/09/18 15:00:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Gallery was not found.' in /home/classbn/inc/a.to4ka.net/modules/imgManager/widgets/Gallery.php:76
+Stack trace:
+#0 /home/classbn/inc/a.to4ka.net/modules/imgManager/widgets/Gallery.php(38): Gallery->loadGalModel(46)
+#1 /home/classbn/inc/framework/web/CBaseController.php(148): Gallery->init()
+#2 /home/classbn/inc/framework/web/CBaseController.php(173): CBaseController->createWidget('imgManager.widg...', Array)
+#3 /home/classbn/inc/a.to4ka.net/views/gallery/index.php(2): CBaseController->widget('imgManager.widg...', Array)
+#4 /home/classbn/inc/framework/web/CBaseController.php(127): require('/home/classbn/i...')
+#5 /home/classbn/inc/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/classbn/i...', Array, true)
+#6 /home/classbn/inc/framework/web/CController.php(870): CBaseController->renderFile('/home/classbn/i...', Array, true)
+#7 /home/classbn/inc/framework/web/CController.php(783): CController->renderPartial('index', Array, true)
+#8 /home/classbn/inc/a.to4ka.net/controllers/GalleryController.php(48): CController->render('index', Array)
+#9 /home/classbn/inc/framework/web/actions/CInlineAction.php(50): GalleryController->actionIndex()
+#10 /home/classbn/inc/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /home/classbn/inc/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 /home/classbn/inc/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#13 /home/classbn/inc/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 /home/classbn/inc/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 /home/classbn/inc/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 /home/classbn/inc/framework/web/CController.php(292): CFilterChain->run()
+#17 /home/classbn/inc/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /home/classbn/inc/framework/web/CWebApplication.php(276): CController->run('')
+#19 /home/classbn/inc/framework/web/CWebApplication.php(135): CWebApplication->runController('gallery')
+#20 /home/classbn/inc/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#21 /home/classbn/public_html/a.to4ka.net/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/gallery
+HTTP_REFERER=http://a.to4ka.net/site/page?view=about
+---
+2014/09/18 15:00:38 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/column1.php (5)
+2014/09/18 15:00:39 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/post.php (44)
+2014/09/18 15:00:41 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/post.php (44)
+2014/09/18 15:04:14 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/post.php (44)
+2014/09/18 15:04:15 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/post.php (44)
+2014/09/18 15:04:15 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/post.php (44)
+2014/09/18 15:04:16 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/post.php (44)
+2014/09/18 15:04:40 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/post.php (44)
+2014/09/18 15:04:49 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/column1.php (5)
+2014/09/18 15:07:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/d0367eec/kcfinder/browse.php".' in /home/classbn/inc/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/classbn/inc/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/d0367eec...')
+#1 /home/classbn/inc/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/classbn/public_html/a.to4ka.net/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/d0367eec/kcfinder/browse.php?type=images&CKEditor=Post%5BpostText%5D&CKEditorFuncNum=125&langCode=bg
+HTTP_REFERER=http://a.to4ka.net/post/update/69
+---
+2014/09/18 15:08:17 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/post.php (44)
+2014/09/18 15:08:19 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/column1.php (5)
+2014/09/18 15:09:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/d0367eec/kcfinder/browse.php".' in /home/classbn/inc/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/classbn/inc/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/d0367eec...')
+#1 /home/classbn/inc/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/classbn/public_html/a.to4ka.net/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/d0367eec/kcfinder/browse.php?type=images&CKEditor=Post%5BpostText%5D&CKEditorFuncNum=125&langCode=en
+HTTP_REFERER=http://a.to4ka.net/post/update/69
+---
+2014/09/18 15:09:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/d0367eec/kcfinder/browse.php".' in /home/classbn/inc/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/classbn/inc/framework/web/CWebApplication.php(135): CWebApplication->runController('assets/d0367eec...')
+#1 /home/classbn/inc/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/classbn/public_html/a.to4ka.net/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/assets/d0367eec/kcfinder/browse.php?type=images&CKEditor=Post%5BpostText%5D&CKEditorFuncNum=125&langCode=en
+HTTP_REFERER=http://a.to4ka.net/post/update/69
+---
+2014/09/19 11:57:10 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/post.php (44)
+2014/09/19 11:57:18 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/post.php (44)
+2014/09/19 11:57:22 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/column1.php (5)
+2014/09/19 11:57:33 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/post.php (44)
+2014/09/19 11:57:35 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/post.php (44)
+2014/09/19 16:22:05 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/post.php (44)
+2014/09/19 16:23:24 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/column1.php (5)
+2014/09/19 16:23:26 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/column1.php (5)
+2014/09/21 16:25:13 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/post.php (44)
+2014/09/21 16:25:26 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/column1.php (5)
+2014/09/21 16:25:28 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/column1.php (5)
+2014/09/21 16:25:31 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/column1.php (5)
+2014/09/21 16:25:33 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/post.php (44)
+2014/09/22 09:40:40 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and mt.messageStatus=0' at line 6. The SQL statement executed was: 
+select count(*)
+from
+	messages m
+	inner join messagesto mt on m.messageId=mt.messageId
+where
+	mt.messageTo= and mt.messageStatus=0
+.
+in /home/classbn/inc/a.to4ka.net/models/Messages.php (270)
+in /home/classbn/inc/a.to4ka.net/views/layouts/main.php (29)
+in /home/classbn/inc/a.to4ka.net/views/layouts/post.php (44)
