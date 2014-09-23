@@ -1,0 +1,1 @@
+[23-Sep-2014 10:44:18 Europe/Sofia] PHP Fatal error:  require_once(): Failed opening required '/home/classbn/public_html/../inc/framework/yii.php' (include_path='.:/usr/local/php54/pear') in /home/classbn/public_html/index.php on line 12
