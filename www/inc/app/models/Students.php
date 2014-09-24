@@ -90,4 +90,9 @@ class Students extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+
+	public static function getLabel($studentId) {
+		$s = self::model()->findByPk($studentId);
+		return $s->studentName.', ученик №'.$s->studentOrder;
+	}
 }

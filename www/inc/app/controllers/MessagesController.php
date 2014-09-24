@@ -85,7 +85,6 @@ class MessagesController extends Controller
 		}
 		if(isset($_POST['Messages'])) {
 			$model->attributes=$_POST['Messages'];
-			@Yii::trace($_POST,'vardump');
 			if ($model->validate()) {
 				if ($model->newMessageSave()) {
 					Yii::app()->user->setFlash('info', 'Съобщението е изпратено');
@@ -103,7 +102,7 @@ class MessagesController extends Controller
 			foreach(preg_split("/((\r?\n)|(\n?\r))/", $model->messageText) as $line){
 				$s[] = '> '.$line;
 			}
-			$model->messageText = "\n\n\nНа {$model->messageDate} {$model->messageFrom} написа:\n".implode("\n",$s);
+			$model->messageText = "\n\n\nНа {$model->messageDate} ".Users::getUserLabel(intval($model->messageFromUserId))." написа:\n".implode("\n",$s);
 		}
 		$this->render('send',array(
 			'model'=>$model,
@@ -138,24 +137,24 @@ class MessagesController extends Controller
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	public function actionCreate()
-	{
-		$model=new Users;
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-		if(isset($_POST['Users']))
-		{
-			$model->attributes=$_POST['Users'];
-			$model->userStatus = 1;
-			$model->userType = 1;
-			$model->studentId = null;
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->userId));
-		}
-		$this->render('create',array(
-			'model'=>$model,
-		));
-	}
+// 	public function actionCreate()
+// 	{
+// 		$model=new Users;
+// 		// Uncomment the following line if AJAX validation is needed
+// 		// $this->performAjaxValidation($model);
+// 		if(isset($_POST['Users']))
+// 		{
+// 			$model->attributes=$_POST['Users'];
+// 			$model->userStatus = 1;
+// 			$model->userType = 1;
+// 			$model->studentId = null;
+// 			if($model->save())
+// 				$this->redirect(array('view','id'=>$model->userId));
+// 		}
+// 		$this->render('create',array(
+// 			'model'=>$model,
+// 		));
+// 	}
 
 
 	/**

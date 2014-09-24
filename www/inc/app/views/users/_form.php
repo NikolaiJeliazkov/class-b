@@ -13,7 +13,7 @@ $form = $this->beginWidget('bootstrap.widgets.BootActiveForm', array(
 <?php echo $form->dropDownListRow($model, 'studentId', $model->getStudentsList(), array('class'=>'span5')); ?><br/>
 <?php echo $form->textFieldRow($model, 'userEmail', array('class'=>'span5')); ?><br/>
 <?php echo $form->textFieldRow($model, 'userPhones', array('class'=>'span5')); ?><br/>
-<?php echo $form->checkBoxRow($model, 'userIsVisible', array()); ?><br/>
+<?php // echo $form->checkBoxRow($model, 'userIsVisible', array()); ?><br/>
 <?php if(Yii::app()->user->getState('userType')>2) :?>
 <?php echo $form->textAreaRow($model, 'notes', array('class'=>'span5', 'rows'=>3)); ?><br/>
 <?php endif ?>

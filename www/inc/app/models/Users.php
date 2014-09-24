@@ -164,4 +164,35 @@ class Users extends CActiveRecord
 		}
 		return $q;
 	}
+
+	public static function getUserLabel($u = false) {
+		$sql = '
+select
+	u.userId,
+	coalesce(u.userFullName, u.userName) as userName,
+	u.userType,
+	u.userIsVisible,
+	s.studentId,
+	s.studentOrder,
+	u.notes
+from
+	users u
+	left join students s on u.studentId=s.studentId
+where
+	u.userId=?
+';
+		if (intval($u)!=0) {
+			$u=Yii::app()->db->createCommand($sql)->queryRow(true, array($u));
+		} else {
+			$u=Yii::app()->db->createCommand($sql)->queryRow(true, array(Yii::app()->user->getId()));
+		}
+		switch($u['userType']) {
+			case '0': $utext = ($u['userIsVisible'])?Students::getLabel($u['studentId']):('ученик №'.$u['studentOrder']);break;
+			case '1': $utext = (($u['userIsVisible'] && $u['userName']!='')?$u['userName'].', ':'').'родител на '.Students::getLabel($u['studentId']);break;
+			case '2': $utext = (($u['userIsVisible'] && $u['userName']!='')?$u['userName'].', ':'').'учител по '.$u['notes'];break;
+			case '3': $utext = (($u['userIsVisible'] && $u['userName']!='')?$u['userName'].', ':'').'класен ръководител';break;
+		}
+		return $utext;
+	}
+
 }

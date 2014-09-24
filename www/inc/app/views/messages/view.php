@@ -24,8 +24,17 @@ $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'cssFile' => Yii::app()->baseUrl . '/css/detailViewStyle/styles.css',
 	'attributes'=>array(
-		(($model->getScenario()=='inbox')?'messageFrom':'messageTo'),
-		(($model->getScenario()=='inbox')?'messageFromStudent':'messageToStudent'),
+		(($model->getScenario()=='inbox')?
+			array(
+				'name'=>'messageFrom',
+				'value'=>Users::getUserLabel(intval($model->messageFromUserId)),
+			)
+			:
+			array(
+				'name'=>'messageTo',
+				'value'=>Users::getUserLabel(intval($model->messageToUserId)),
+			)
+		),
 		'messageDate',
 		'messageSubject',
 		'messageText:html',
@@ -40,4 +49,7 @@ function confirmDeletion() {
 };
 
 ",CClientScript::POS_END);
-?>
+
+
+
+Controller::trace(Users::getUserLabel(intval($model->messageFromUserId)));

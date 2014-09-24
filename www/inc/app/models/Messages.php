@@ -167,14 +167,11 @@ where
 	}
 
 	public function getAddressBook() {
-		$userTypes = array('1'=>'родител', '2'=>'учител', '3'=>'класен ръководител');
+		$userTypes = array('0'=>'ученик','1'=>'родител', '2'=>'учител', '3'=>'класен ръководител');
 		$sql = '
 select
   u.userId,
-  coalesce(u.userFullName, u.userName) as userName,
-  u.userType,
-  u.userIsVisible,
-  s.studentName
+  u.userType
 from
   users u
   left join students s on u.studentId=s.studentId
@@ -186,45 +183,34 @@ order by u.userType desc, s.studentOrder
 		$all=Yii::app()->db->createCommand($sql)->queryAll(true, array(Yii::app()->user->getId()));
 		$q[] = array('id'=>0,'text'=>'всички родители','group'=>$userTypes[1]);
 		foreach($all as $u) {
-			if ($u['userType']!=1) {
-				$utext = ($u['userIsVisible'])?$u['userName']:'учител';
-			} else {
-				$utext = ($u['userIsVisible'])?$u['userName'].', ':'';
-				$utext.= 'родител на '.$u['studentName'];
-			}
-
-			$q[] = array('id'=>$u['userId'],'text'=>$utext,'group'=>$userTypes[$u['userType']]);
+			$q[] = array('id'=>$u['userId'],'text'=>Users::getUserLabel($u['userId']),'group'=>$userTypes[$u['userType']]);
 		}
 		return $q;
 	}
 
 	public function newMessageSave() {
-		$sql = '
-select
-	u.userId,
-	coalesce(u.userFullName, u.userName) as userName,
-	u.userType,
-	u.userIsVisible,
-	s.studentName
-from
-	users u
-	left join students s on u.studentId=s.studentId
-where
-	u.userId=?
-';
-		$row=Yii::app()->db->createCommand($sql)->queryRow(true, array(Yii::app()->user->getId()));
-		if ($row['userType']!=1) {
-			$utext = ($row['userIsVisible'])?$row['userName']:'учител';
-		} else {
-			$utext = ($row['userIsVisible'])?$row['userName'].', ':'';
-			$utext.= 'родител на '.$row['studentName'];
-		}
+// 		$sql = '
+// select
+// 	u.userId,
+// 	coalesce(u.userFullName, u.userName) as userName,
+// 	u.userType,
+// 	u.userIsVisible,
+// 	s.studentName,
+// 	s.studentOrder
+// from
+// 	users u
+// 	left join students s on u.studentId=s.studentId
+// where
+// 	u.userId=?
+// ';
+// 		$row=Yii::app()->db->createCommand($sql)->queryRow(true, array(Yii::app()->user->getId()));
+		$utext = Users::getUserLabel();
 
 		$this->messageFrom = Yii::app()->user->getId();
 		$this->messageStatus = 0;
 		$sql = "select userId, userEmail from users where userType<>100 and userId<>?";
 		$binds = array($this->messageFrom);
-		if ($this->messageTo != 0) {
+		if ($this->messageTo > 0) {
 			$sql.=" and userId=?";
 			array_push($binds, $this->messageTo);
 		} else {
@@ -252,14 +238,16 @@ where
 
 		foreach ($all as $r) {
 			$a=Yii::app()->db->createCommand($sql1)->execute(array($mid, $r['userId'], $this->messageStatus));
-			@mail($r['userEmail'],$emailSubject,$emailText,$headers);
+			if ($r['userEmail'] != '') {
+				//@mail($r['userEmail'],$emailSubject,$emailText,$headers);
+			}
 		}
 		return true;
 	}
 
 	public static function countNew() {
 		try {
-		$sql = "
+			$sql = "
 select count(*)
 from
 	messages m
@@ -267,7 +255,7 @@ from
 where
 	mt.messageTo=? and mt.messageStatus=0
 ";
-		$count=Yii::app()->db->createCommand($sql)->queryScalar(array(Yii::app()->user->getId()));
+			$count=Yii::app()->db->createCommand($sql)->queryScalar(array(Yii::app()->user->getId()));
 		} catch (Exception $e) {
 			$count = 0;
 		}

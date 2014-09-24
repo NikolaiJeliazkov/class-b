@@ -23,4 +23,9 @@ class Controller extends CController
 
 	public $metaKeywords = '';
 	public $metaDescription = '';
+
+	public static function trace($var) {
+		Yii::trace(CVarDumper::dumpAsString($var),'vardump');
+	}
+
 }
