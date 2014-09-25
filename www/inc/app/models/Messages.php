@@ -239,7 +239,7 @@ order by u.userType desc, s.studentOrder
 		foreach ($all as $r) {
 			$a=Yii::app()->db->createCommand($sql1)->execute(array($mid, $r['userId'], $this->messageStatus));
 			if ($r['userEmail'] != '') {
-				//@mail($r['userEmail'],$emailSubject,$emailText,$headers);
+				@mail($r['userEmail'],$emailSubject,$emailText,$headers);
 			}
 		}
 		return true;
