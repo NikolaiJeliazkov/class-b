@@ -109,6 +109,30 @@ class MessagesController extends Controller
 		));
 	}
 
+	public function actionNotify($id) {
+		$model=new Messages('send');
+		$model->loadModel($id);
+
+		$utext = Users::getUserLabel(intval($model->messageFromUserId));
+
+		$email = Users::model()->findByPk($model->messageToUserId)->userEmail;
+
+		$headers = 'MIME-Version: 1.0' . "\r\n";
+		$headers.= 'Content-type: text/plain; charset=UTF-8' . "\r\n";
+		$headers.= 'From: '.Yii::app()->params['adminEmail']."\r\n";
+		$headers.= 'Content-Transfer-Encoding: 7bit' . "\r\n";
+
+		$emailSubject = "=?UTF-8?B?" . base64_encode(Yii::app()->params['appName'].' - '.$model->messageSubject) . "?=";
+		$emailText = "Получихте ново съобщение от {$utext}, което можете да прочетете на адрес\n";
+		$emailText.= Yii::app()->params['appUrl']."/messages/inbox/{$id}\n\n";
+		$emailText.= "ТОВА Е АВТОМАТИЧНО ГЕНЕРИРАНО СЪОБЩЕНИЕ. МОЛЯ, НЕ ОТГОВАРЯЙТЕ!\n\n";
+
+		if ($email) {
+			mail($email,$emailSubject,$emailText,$headers);
+		}
+	}
+
+
 	public function actionSuggestUsers() {
 		if(isset($_GET['q']) && ($keyword=trim($_GET['q']))!=='') {
 			$tags=Tag::model()->suggestTags($keyword);
