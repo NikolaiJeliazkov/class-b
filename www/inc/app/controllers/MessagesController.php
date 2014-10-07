@@ -4,12 +4,6 @@ class MessagesController extends Controller
 {
 	public $layout='//layouts/column1';
 
-	public function filters() {
-		return array(
-			'accessControl', // perform access control for CRUD operations
-		);
-	}
-
 	public function accessRules() {
 		return array(
 // 			array('allow', // allow authenticated user to perform 'create' and 'update' actions

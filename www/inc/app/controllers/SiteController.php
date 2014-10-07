@@ -2,24 +2,22 @@
 
 class SiteController extends Controller
 {
-	/**
-	 * Declares class-based actions.
-	 */
-// 	public function actions()
-// 	{
-// 		return array(
-// 			// captcha action renders the CAPTCHA image displayed on the contact page
-// 			'captcha'=>array(
-// 				'class'=>'CCaptchaAction',
-// 				'backColor'=>0xFFFFFF,
-// 			),
-// 			// page action renders "static" pages stored under 'protected/views/site/pages'
-// 			// They can be accessed via: index.php?r=site/page&view=FileName
-// 			'page'=>array(
-// 				'class'=>'CViewAction',
-// 			),
-// 		);
-// 	}
+	public function accessRules()
+	{
+		return array(
+			array('allow', // allow authenticated user to perform 'create' and 'update' actions
+				'actions'=>array('index','page','error','contact','login'),
+				'users'=>array('*'),
+			),
+			array('allow', // allow authenticated user to perform 'create' and 'update' actions
+				'actions'=>array('logout'),
+				'users'=>array('@')
+			),
+			array('deny',  // deny all users
+				'users'=>array('*'),
+			),
+		);
+	}
 
 	/**
 	 * This is the default 'index' action that is invoked

@@ -186,11 +186,13 @@ where
 		} else {
 			$u=Yii::app()->db->createCommand($sql)->queryRow(true, array(Yii::app()->user->getId()));
 		}
+		$utext = '';
 		switch($u['userType']) {
 			case '0': $utext = ($u['userIsVisible'])?Students::getLabel($u['studentId']):('ученик №'.$u['studentOrder']);break;
 			case '1': $utext = (($u['userIsVisible'] && $u['userName']!='')?$u['userName'].', ':'').'родител на '.Students::getLabel($u['studentId']);break;
 			case '2': $utext = (($u['userIsVisible'] && $u['userName']!='')?$u['userName'].', ':'').'учител по '.$u['notes'];break;
 			case '3': $utext = (($u['userIsVisible'] && $u['userName']!='')?$u['userName'].', ':'').'класен ръководител';break;
+			case '100': $utext = (($u['userIsVisible'] && $u['userName']!='')?$u['userName'].', ':'').'администратор';break;
 		}
 		return $utext;
 	}

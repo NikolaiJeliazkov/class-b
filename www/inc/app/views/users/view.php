@@ -19,6 +19,21 @@ $this->menu=array(
 	),
 // 	array('label'=>'Manage Users', 'url'=>array('admin')),
 );
+
+if ($model->userType=='1') {
+	$r = array(
+			'name'=>'studentId',
+			'value'=>@Students::model()->find('studentId=:studentId', array(':studentId'=>$model->studentId))->studentName
+		);
+} else {
+	$r = array(
+			'label'=>'',
+			'value'=>Users::getUserLabel(intval($model->userId))
+	);
+}
+
+Controller::trace($model);
+
 ?>
 
 <h1>Профил <i>(<?php echo $model->userName; ?>)</i></h1>
@@ -32,10 +47,10 @@ $this->menu=array(
 // 		'userType',
 		'userName',
 // 		'userPass',
-		'userFullName',
+// 		'userFullName',
 		array(
-			'name'=>'studentId',
-			'value'=>Students::model()->find('studentId=:studentId', array(':studentId'=>$model->studentId))->studentName
+				'name'=>'userFullName',
+				'value'=>Users::getUserLabel(intval($model->userId))
 		),
 		'userEmail',
 		'userPhones',
