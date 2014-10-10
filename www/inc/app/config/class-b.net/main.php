@@ -16,7 +16,7 @@ return array(
 	// preloading 'log' component
 	'preload'=>array(
 		'log',
-		'bootstrap', // preload the bootstrap component
+		'booster',
 	),
 
 	// autoloading model and component classes
@@ -111,9 +111,10 @@ return array(
 				*/
 			),
 		),
-		'bootstrap'=>array(
-			'class'=>'ext.bootstrap.components.Bootstrap', // assuming you extracted bootstrap under extensions
+		'booster' => array(
+			'class' => 'ext.booster.components.Booster',
 		),
+
 	),
 
 	// application-level parameters that can be accessed

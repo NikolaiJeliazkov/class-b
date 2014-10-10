@@ -25,6 +25,8 @@ class TbBreadcrumbs extends CBreadcrumbs {
 	 */
 	public $htmlOptions = array('class' => 'breadcrumb');
 
+	public $activeLinkTemplate='<a href="{url}">{label}</a>';
+
 	/**
 	 * String, specifies how each inactive item is rendered. Defaults to
 	 * "{label}", where "{label}" will be replaced by the corresponding item label.
@@ -39,7 +41,7 @@ class TbBreadcrumbs extends CBreadcrumbs {
 	 * Renders the content of the widget.
 	 */
 	public function run() {
-		
+
 		if (empty($this->links))
 			return;
 

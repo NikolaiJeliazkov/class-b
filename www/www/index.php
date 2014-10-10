@@ -1,9 +1,9 @@
 <?php
 
-$incPath = dirname(dirname(dirname(__FILE__))).DIRECTORY_SEPARATOR.'inc'.DIRECTORY_SEPARATOR;
+$incPath = dirname(dirname(__FILE__)).DIRECTORY_SEPARATOR.'inc'.DIRECTORY_SEPARATOR;
 
 $yii=$incPath.'framework'.DIRECTORY_SEPARATOR.'yii.php';
-$config=$incPath.'app'.DIRECTORY_SEPARATOR.'config'.DIRECTORY_SEPARATOR.'a.to4ka.net'.DIRECTORY_SEPARATOR.'main.php';
+$config=$incPath.'app'.DIRECTORY_SEPARATOR.'config'.DIRECTORY_SEPARATOR.'class-b.net'.DIRECTORY_SEPARATOR.'main.php';
 
 // remove the following lines when in production mode
 defined('YII_DEBUG') or define('YII_DEBUG',true);
