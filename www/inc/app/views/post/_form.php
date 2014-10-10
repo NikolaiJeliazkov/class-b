@@ -79,6 +79,3 @@ $this->widget(
 );
 $this->endWidget();
 
-
-
-?>

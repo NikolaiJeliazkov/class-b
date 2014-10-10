@@ -15,7 +15,7 @@ return array(
 	// preloading 'log' component
 	'preload'=>array(
 		'log',
-		'bootstrap',
+// 		'bootstrap',
 		'booster'
 	),
 

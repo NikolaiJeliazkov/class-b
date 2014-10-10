@@ -34,8 +34,8 @@ $('#messages-grid tbody tr:contains(\"Ново\")').css('font-weight','bold');
 </div><!-- search-form -->
 
 <div class="btn-toolbar">
-<?php $this->widget('bootstrap.widgets.BootButtonGroup', array(
-	'type'=>'', // '', 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
+<?php $this->widget('booster.widgets.TbButtonGroup', array(
+	'context' => 'default',
 	'buttons'=>array(
 		array('label'=>'Папки', 'items'=>array(
 			array('label'=>'Входящи', 'url'=>$this->createUrl('inbox'), 'icon'=>'inbox'),
@@ -44,10 +44,10 @@ $('#messages-grid tbody tr:contains(\"Ново\")').css('font-weight','bold');
 	),
 )); ?>
 <?php if ($model->getScenario()=='inbox') : ?>
-<?php $this->widget('bootstrap.widgets.BootButtonGroup', array(
-	'type'=>'', // '', 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
+<?php $this->widget('booster.widgets.TbButtonGroup', array(
+	'context' => 'default',
 	'buttons'=>array(
-		array('label'=>'Ново съобщение', 'url'=>$this->createUrl('send'), 'icon'=>'envelope'),
+		array('label'=>'Ново съобщение', 'url'=>'#', 'icon'=>'envelope', 'htmlOptions'=>array('onClick'=>'window.location.href="'.$this->createUrl('send').'"')),
 		array('label'=>'Изтрий маркираните', 'url'=>'#', 'icon'=>'remove', 'htmlOptions'=>array('onClick'=>'return DeleteAll();')),
 		array('label'=>'Маркирай като прочетени', 'url'=>'#', 'icon'=>'ok', 'htmlOptions'=>array('onClick'=>'return MarkAsRead();')),
 	),
@@ -91,7 +91,7 @@ $('#messages-grid tbody tr:contains(\"Ново\")').css('font-weight','bold');
 )); ?>
 
 <?php /** @var BootActiveForm $form */
-$form = $this->beginWidget('bootstrap.widgets.BootActiveForm', array(
+$form = $this->beginWidget('booster.widgets.TbActiveForm', array(
 	'id'=>'actions-form',
 )); ?>
 <?php echo $form->hiddenField($model, 'action'); ?>

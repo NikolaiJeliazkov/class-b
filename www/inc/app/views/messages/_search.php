@@ -1,11 +1,15 @@
 <?php /** @var BootActiveForm $form */
-$form = $this->beginWidget('bootstrap.widgets.BootActiveForm', array(
-    'id'=>'searchForm',
-    'type'=>'search',
-//     'htmlOptions'=>array('class'=>'well'),
-)); ?>
+$form = $this->beginWidget('booster.widgets.TbActiveForm', array(
+	'htmlOptions'=>array('class'=>''),
+	'id'=>'search-form',
+	'type' => 'horizontal',
+	'method'=>'get',
+	'enableAjaxValidation'=>false,
+));
+echo $form->textFieldGroup($model, 'searchField', array('class'=>'col-sm-5'))."<br/>";
+$this->widget(
+		'booster.widgets.TbButton',
+		array('buttonType' => 'submit', 'label' => 'Търси')
+);
 
-<?php echo $form->textFieldRow($model, 'searchField', array('class'=>'input-medium')); ?>
-<?php echo CHtml::htmlButton('<i class="icon-search"></i> Търси', array('class'=>'btn','type'=>'submit')); ?>
-
-<?php $this->endWidget(); ?>
+$this->endWidget();

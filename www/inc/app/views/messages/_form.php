@@ -1,34 +1,52 @@
 <?php /** @var BootActiveForm $form */
-$form = $this->beginWidget('bootstrap.widgets.BootActiveForm', array(
+$form = $this->beginWidget('booster.widgets.TbActiveForm', array(
 	'htmlOptions'=>array('class'=>'well'),
 	'id'=>'messages-form',
 	'enableAjaxValidation'=>false,
 )); ?>
 <p class="note">Полетата маркирани със <span class="required">*</span> са задължителни.</p>
-<?php echo $form->errorSummary($model); ?>
 <?php
-// echo $form->textAutoCompleteRow($model, 'messageTo', array('class'=>'span9'), array(
-// 	'url'=>array('suggestUsers'),
-// 	'multiple'=>true,
-// ));
-?><br/>
-<?php $data = CHtml::listData($model->getAddressBook(),'id','text','group'); ?>
-<?php echo $form->hiddenField($model, 'messageParent'); ?>
-<?php echo $form->dropDownListRow($model, 'messageTo', $data, array('class'=>'span9')); ?><br/>
-<?php echo $form->textFieldRow($model, 'messageSubject', array('class'=>'span9')); ?><br/>
-<?php //echo $form->textAreaRow($model, 'messageText', array('class'=>'span9', 'rows'=>10)); ?><br/>
-<?php
-echo $form->textCKEditor($model, 'messageText', array(), array(
-	"config"=>array('skin'=>'v2', 'toolbarStartupExpanded' => true),
-	"height"=>'200px',
-	"width"=>'100%',
-	"filespath"=>$_SERVER['DOCUMENT_ROOT']."/files/",
-	"filesurl"=>Yii::app()->baseUrl."/files/",
+echo $form->errorSummary($model);
+echo $form->hiddenField($model, 'messageParent');
+echo $form->dropDownListGroup($model, 'messageTo',
+		array(
+			'wrapperHtmlOptions' => array(
+				'class' => 'col-sm-5',
+			),
+			'widgetOptions' => array(
+				'data' => CHtml::listData($model->getAddressBook(),'id','text','group'),
+				'htmlOptions' => array(),
+			)
+		)
+);
+echo $form->textFieldGroup($model, 'messageSubject', array('class'=>'col-sm-5'));
+echo "<div class='form-group'><label class='control-label'>".$model->getAttributeLabel('messageText')."</label>";
+$this->widget('ext.imperavi-redactor-widget.ImperaviRedactorWidget', array(
+	'id' => 'messageText',
+	'model' => $model,
+	'attribute' => 'messageText',
+// 	'plugins' => array(
+// 		'imagemanager'=>array('js' => array('imagemanager.js')),
+// 	),
+	'options' => array(
+		'lang' => 'bg',
+		'toolbar' => true,
+		'buttonSource' => true,
+		'iframe' => true,
+// 		'imageUpload'=>Yii::app()->createUrl('files/imageUpload',array('attr'=>'images')),
+// 		'imageUploadErrorCallback'=>new CJavaScriptExpression(
+// 				'function(obj,json) { alert(obj.error); }'
+// 		),
+// 		'imageManagerJson' => Yii::app()->createUrl('files/imageList',array('attr'=>'images')),
+// 		'imageEditable' => true,
+		'css' => '/css/main.css',
+	),
 ));
-?><br/>
-
-<?php echo CHtml::htmlButton('<i class="icon-ok"></i> Изпрати', array('class'=>'btn', 'type'=>'submit', 'name'=>'btn1')); ?>
-<?php $this->endWidget(); ?>
-
+echo "</div>\n";
+$this->widget(
+		'booster.widgets.TbButton',
+		array('buttonType' => 'submit', 'label' => 'Изпрати', 'icon'=>'ok')
+);
+$this->endWidget();
 
 

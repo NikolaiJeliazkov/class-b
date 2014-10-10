@@ -33,4 +33,5 @@ $this->widget(
 		array('buttonType' => 'submit', 'label' => ($model->isNewRecord ? 'Създай' : 'Запази'), 'icon'=>'ok')
 );
 $this->endWidget();
-?>
+
+

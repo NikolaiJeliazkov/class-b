@@ -7,20 +7,19 @@ $this->breadcrumbs=array(
 
 if ($model->getScenario()=='inbox') {
 	$buttons = array(
-		array('label'=>'Отговори', 'url'=>$this->createUrl('send',array('id'=>$model->messageId)), 'icon'=>'chevron-left'),
-// 		array('label'=>'Препрати', 'url'=>'#', 'icon'=>'chevron-right'),
-		array('label'=>'Изтрий',   'url'=>'javascript:confirmDeletion()', 'icon'=>'remove'),
+		array('label'=>'Отговори', 'icon'=>'chevron-left', 'htmlOptions'=>array('onClick'=>'window.location.href="'.$this->createUrl('send',array('id'=>$model->messageId)).'"')),
+		array('label'=>'Изтрий',   'icon'=>'remove',       'htmlOptions'=>array('onClick'=>'return confirmDeletion()')),
 	);
 
 	echo '<div class="btn-toolbar">';
-	$this->widget('bootstrap.widgets.BootButtonGroup', array(
-		'type'=>'', // '', 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
+	$this->widget('booster.widgets.TbButtonGroup', array(
+		'context'=>'default',
 		'buttons'=>$buttons,
 	));
 	echo '</div>';
 }
 
-$this->widget('zii.widgets.CDetailView', array(
+$this->widget('booster.widgets.TbDetailView', array(
 	'data'=>$model,
 	'cssFile' => Yii::app()->baseUrl . '/css/detailViewStyle/styles.css',
 	'attributes'=>array(
