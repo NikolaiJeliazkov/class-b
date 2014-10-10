@@ -31,7 +31,7 @@ $('.search-form form').submit(function(){
 	'model'=>$model,
 )); ?>
 </div><!-- search-form -->
-<?php $this->widget('zii.widgets.grid.CGridView', array(
+<?php $this->widget('booster.widgets.TbGridView', array(
 	'id'=>'users-grid',
 	'dataProvider'=>$model->search(),
 // 	'filter'=>$model,
@@ -48,11 +48,18 @@ $('.search-form form').submit(function(){
 		'userEmail',
 		'userPhones',
 		array(
-			'header' => '',
-			'class' => 'CButtonColumn',
-			'viewButtonImageUrl' => Yii::app()->baseUrl . '/css/gridViewStyle/' . 'gr-view.png',
-			'updateButtonImageUrl' => Yii::app()->baseUrl . '/css/gridViewStyle/' . 'gr-update.png',
-			'deleteButtonImageUrl' => Yii::app()->baseUrl . '/css/gridViewStyle/' . 'gr-delete.png',
-),
+			'htmlOptions' => array('nowrap'=>'nowrap'),
+			'class'=>'booster.widgets.TbButtonColumn',
+// 			'viewButtonUrl'=>null,
+// 			'updateButtonUrl'=>null,
+// 			'deleteButtonUrl'=>null,
+		)
+// 		array(
+// 			'header' => '',
+// 			'class' => 'CButtonColumn',
+// 			'viewButtonImageUrl' => Yii::app()->baseUrl . '/css/gridViewStyle/' . 'gr-view.png',
+// 			'updateButtonImageUrl' => Yii::app()->baseUrl . '/css/gridViewStyle/' . 'gr-update.png',
+// 			'deleteButtonImageUrl' => Yii::app()->baseUrl . '/css/gridViewStyle/' . 'gr-delete.png',
+// ),
 	),
 )); ?>

@@ -10,7 +10,7 @@
 	$this->beginWidget('zii.widgets.CPortlet', array(
 		'title'=>'&nbsp;',
 	));
-	$this->widget('zii.widgets.CMenu', array(
+	$this->widget('booster.widgets.TbMenu', array(
 		'items'=>$this->menu,
 		'htmlOptions'=>array('class'=>'operations'),
 	));

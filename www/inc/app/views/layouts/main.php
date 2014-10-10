@@ -33,8 +33,7 @@
 		<div id="usermenu">
 <?php
 $msgCount = Messages::countNew();
-// $this->widget('zii.widgets.CMenu',array(
-$this->widget('bootstrap.widgets.BootMenu',array(
+$this->widget('booster.widgets.TbMenu',array(
 	'type'=>'pills',
 	'stacked'=>false,
 	'items'=>array(
@@ -51,8 +50,7 @@ $this->widget('bootstrap.widgets.BootMenu',array(
 
 	<div id="mainmenu">
 <?php
-// $this->widget('zii.widgets.CMenu',array(
-$this->widget('bootstrap.widgets.BootMenu',array(
+$this->widget('booster.widgets.TbMenu',array(
 	'type'=>'tabs',
 	'items'=>array(
 		array('label'=>'Блог', 'url'=>array('/post/index')),
@@ -66,12 +64,12 @@ $this->widget('bootstrap.widgets.BootMenu',array(
 	</div><!-- mainmenu -->
 <?php
 if(isset($this->breadcrumbs) && count($this->breadcrumbs)>0) {
-	$this->widget('bootstrap.widgets.BootBreadcrumbs', array(
+	$this->widget('booster.widgets.TbBreadcrumbs', array(
 		'links'=>$this->breadcrumbs,
 	)); //<!-- breadcrumbs -->
 }
 ?>
-<?php $this->widget('bootstrap.widgets.BootAlert'); ?>
+<?php $this->widget('booster.widgets.TbAlert'); ?>
 
 	<?php echo $content; ?>
 

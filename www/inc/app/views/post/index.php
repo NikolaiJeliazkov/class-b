@@ -11,7 +11,7 @@ $this->menu=array(
 </h1>
 <?php endif; ?>
 
-<?php $this->widget('zii.widgets.CListView', array(
+<?php $this->widget('booster.widgets.TbListView', array(
 		'dataProvider'=>$dataProvider,
 		'itemView'=>'_view',
 		'template'=>"{items}\n{pager}",

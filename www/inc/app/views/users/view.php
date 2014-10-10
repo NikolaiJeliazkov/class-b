@@ -32,13 +32,11 @@ if ($model->userType=='1') {
 	);
 }
 
-Controller::trace($model);
-
 ?>
 
 <h1>Профил <i>(<?php echo $model->userName; ?>)</i></h1>
 
-<?php $this->widget('bootstrap.widgets.BootDetailView', array(
+<?php $this->widget('booster.widgets.TbDetailView', array(
 	'data'=>$model,
 	'cssFile' => Yii::app()->baseUrl . '/css/detailViewStyle/styles.css',
 	'attributes'=>array(
@@ -58,3 +56,4 @@ Controller::trace($model);
 // 		'notes',
 	),
 )); ?>
+
