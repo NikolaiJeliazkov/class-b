@@ -7,9 +7,9 @@
 	<div style="clear: both;">&nbsp;</div>
 	<div class="entry">
 		<?php
-			$this->beginWidget('CMarkdown', array('purifyOutput'=>true));
+// 			$this->beginWidget('CMarkdown', array('purifyOutput'=>true));
 			echo $data->anonceText;
-			$this->endWidget();
+// 			$this->endWidget();
 		?>
 		<div style="clear: both;">&nbsp;</div>
 		<p class="links">

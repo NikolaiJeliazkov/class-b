@@ -15,9 +15,15 @@ $form = $this->beginWidget('booster.widgets.TbActiveForm', array(
 	),
 )); ?>
 <p class="note">Полетата маркирани със <span class="required">*</span> са задължителни.</p>
-<?php echo $form->errorSummary($model); ?>
-<?php echo $form->textFieldGroup($model, 'userName', array('class'=>'span3')); ?>
-<?php echo $form->passwordFieldGroup($model, 'userPass', array('class'=>'span3')); ?>
-<?php echo $form->checkboxGroup($model, 'rememberMe'); ?>
-<?php echo CHtml::htmlButton('<i class="icon-ok"></i> Вход', array('class'=>'btn', 'type'=>'submit')); ?>
-<?php $this->endWidget(); ?>
+<?php
+echo $form->errorSummary($model);
+echo $form->textFieldGroup($model, 'userName', array('class'=>'span3'));
+echo $form->passwordFieldGroup($model, 'userPass', array('class'=>'span3'));
+echo $form->checkboxGroup($model, 'rememberMe');
+$this->widget(
+		'booster.widgets.TbButton',
+		array('buttonType' => 'submit', 'label' => 'Вход', 'icon'=>'ok')
+);
+$this->endWidget();
+
+

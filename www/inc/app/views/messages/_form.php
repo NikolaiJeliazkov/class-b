@@ -25,20 +25,21 @@ $this->widget('ext.imperavi-redactor-widget.ImperaviRedactorWidget', array(
 	'id' => 'messageText',
 	'model' => $model,
 	'attribute' => 'messageText',
-// 	'plugins' => array(
-// 		'imagemanager'=>array('js' => array('imagemanager.js')),
-// 	),
+	'plugins' => array(
+		'imagemanager'=>array('js' => array('imagemanager.js')),
+	),
 	'options' => array(
 		'lang' => 'bg',
 		'toolbar' => true,
 		'buttonSource' => true,
 		'iframe' => true,
-// 		'imageUpload'=>Yii::app()->createUrl('files/imageUpload',array('attr'=>'images')),
-// 		'imageUploadErrorCallback'=>new CJavaScriptExpression(
-// 				'function(obj,json) { alert(obj.error); }'
-// 		),
-// 		'imageManagerJson' => Yii::app()->createUrl('files/imageList',array('attr'=>'images')),
-// 		'imageEditable' => true,
+		'imageUpload'=>Yii::app()->createUrl('messages/imageUpload',array('attr'=>'images')),
+		'imageUploadErrorCallback'=>new CJavaScriptExpression(
+				'function(obj,json) { alert(obj.error); }'
+		),
+		'imageManagerJson' => Yii::app()->createUrl('messages/imageList',array('attr'=>'images')),
+		'imageEditable' => true,
+		'fileUpload' => Yii::app()->createUrl('messages/fileUpload',array('attr'=>'files')),
 		'css' => '/css/main.css',
 	),
 ));

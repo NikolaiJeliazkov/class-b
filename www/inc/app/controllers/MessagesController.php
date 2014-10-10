@@ -19,6 +19,31 @@ class MessagesController extends Controller
 		);
 	}
 
+	public function actions()
+	{
+		return array(
+			'fileUpload'=>array(
+				'class'=>'ext.imperavi-redactor-widget.actions.FileUpload',
+				'uploadPath'=>path::normalize($_SERVER['DOCUMENT_ROOT']).DIRECTORY_SEPARATOR.'files',
+				'uploadUrl'=>'/files',
+				'uploadCreate'=>true,
+				'permissions'=>0755,
+			),
+			'imageUpload'=>array(
+				'class'=>'ext.imperavi-redactor-widget.actions.ImageUpload',
+				'uploadPath'=>path::normalize($_SERVER['DOCUMENT_ROOT']).DIRECTORY_SEPARATOR.'files',
+				'uploadUrl'=>'/files',
+				'uploadCreate'=>true,
+				'permissions'=>0755,
+			),
+			'imageList'=>array(
+				'class'=>'ext.imperavi-redactor-widget.actions.ImageList',
+				'uploadPath'=>path::normalize($_SERVER['DOCUMENT_ROOT']).DIRECTORY_SEPARATOR.'files',
+				'uploadUrl'=>'/files',
+			),
+		);
+	}
+
 	public function actionIndex() {
 		$this->redirect(array('inbox'));
 	}

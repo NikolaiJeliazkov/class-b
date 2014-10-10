@@ -104,9 +104,9 @@ return array(
 				*/
 			),
 		),
-		'bootstrap'=>array(
-			'class'=>'ext.bootstrap.components.Bootstrap', // assuming you extracted bootstrap under extensions
-		),
+// 		'bootstrap'=>array(
+// 			'class'=>'ext.bootstrap.components.Bootstrap', // assuming you extracted bootstrap under extensions
+// 		),
 		'booster' => array(
 				'class' => 'ext.booster.components.Booster',
 		),

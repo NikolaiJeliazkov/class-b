@@ -25,22 +25,22 @@ class FilesController extends Controller
 		return array(
 			'fileUpload'=>array(
 				'class'=>'ext.imperavi-redactor-widget.actions.FileUpload',
-				'uploadPath'=>path::normalize($_SERVER['DOCUMENT_ROOT'])."/files",
-				'uploadUrl'=>'/files',
+				'uploadPath'=>path::normalize($_SERVER['DOCUMENT_ROOT']),
+				'uploadUrl'=>'',
 				'uploadCreate'=>true,
 				'permissions'=>0755,
 			),
 			'imageUpload'=>array(
 				'class'=>'ext.imperavi-redactor-widget.actions.ImageUpload',
-				'uploadPath'=>path::normalize($_SERVER['DOCUMENT_ROOT'])."/files",
-				'uploadUrl'=>'/files',
+				'uploadPath'=>path::normalize($_SERVER['DOCUMENT_ROOT']),
+				'uploadUrl'=>'',
 				'uploadCreate'=>true,
 				'permissions'=>0755,
 			),
 			'imageList'=>array(
 				'class'=>'ext.imperavi-redactor-widget.actions.ImageList',
-				'uploadPath'=>path::normalize($_SERVER['DOCUMENT_ROOT'])."/files",
-				'uploadUrl'=>'/files',
+				'uploadPath'=>path::normalize($_SERVER['DOCUMENT_ROOT']),
+				'uploadUrl'=>'',
 			),
 		);
 	}
