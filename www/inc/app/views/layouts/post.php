@@ -7,19 +7,6 @@
 
 <div id="sidebar">
 <?php
-// 	$this->beginWidget('zii.widgets.CPortlet', array(
-// 		'title'=>'&nbsp;',
-// 	));
-// 	$this->widget('ext.visualsearch.VisualSearch', array(
-// 		'id'=>'vs111',
-// 	));
-// 	$this->endWidget();
-?>
-
-
-
-
-<?php
 	$this->beginWidget('zii.widgets.CPortlet', array(
 		'title'=>'&nbsp;',
 	));
