@@ -85,6 +85,21 @@ class Images extends CActiveRecord {
 				'imageId, galleryId, imageOrder, imageFileId, imageBaseName, imageExtension, imageTitle, imageDescription, imageSize, imageType, imagePath, imageUrl, imageCreated, imageUpdated',
 				'safe',
 				'on' => 'search'
+			),
+// 			array (
+// 				'image',
+// 				'length',
+// 				'max' => 255,
+// 				'tooLong' => '{attribute} is too long (max {max} chars).',
+// 				'on' => 'upload'
+// 			),
+			array (
+				'image',
+				'file',
+				'types' => 'jpg,jpeg,gif,png',
+				'maxSize' => 1024 * 1024 * 2,
+				'tooLarge' => 'Size should be less then 2MB !!!',
+				'on' => 'upload'
 			)
 		);
 	}
