@@ -19,29 +19,35 @@ echo $form->errorSummary ( $images );
 	&nbsp;
 	<?php echo CHtml::htmlButton('<i class="icon-ban-circle"></i> Изчисти', array('class'=>'btn', 'type'=>'reset')); ?>
 </div>
+<?php $this->endWidget(); ?>
 <?php
 
 if (! $model->isNewRecord) {
 	echo "<br />\n";
 	// the button that may open the dialog
-	$this->widget ( 'booster.widgets.TbButton', array (
-	'buttonType' => 'button',
-	'label' => 'Нова картинка',
-	'htmlOptions'=> array('onclick' => new CJavaScriptExpression ('$(\'#mydialog\').dialog(\'open\'); return false;')),
-	) );
+	// $this->widget ( 'booster.widgets.TbButton', array (
+	// 'buttonType' => 'button',
+	// 'label' => 'Нова картинка',
+	// 'htmlOptions'=> array('onclick' => new CJavaScriptExpression ('$(\'#mydialog\').dialog(\'open\'); return false;')),
+	// ) );
 
-// 	$this->widget ( 'booster.widgets.TbFileUpload', array (
-// 		'url' => Yii::app ()->createUrl ( "/admin/galleries/update", array (
-// 			"id" => $model->galleryId
-// 		) ),
-// 		'model' => $model,
-// 		'attribute' => 'image', // see the attribute?
-// 		'multiple' => true,
-// 		'options' => array (
-// 			'maxFileSize' => 2000000,
-// 			'acceptFileTypes' => 'js:/(\.|\/)(gif|jpg|jpeg|png)$/i'
-// 		)
-// 	) );
+	$this->widget ( 'booster.widgets.TbFileUpload', array (
+		'url' => Yii::app ()->createUrl ( "/admin/galleries/uploadImage", array (
+			"galleryId" => $model->galleryId
+		) ),
+		'model' => $images,
+		'attribute' => 'image', // see the attribute?
+		'multiple' => true,
+		'options' => array (
+			'maxFileSize' => 2000000,
+			'acceptFileTypes' => 'js:/(\.|\/)(gif|jpg|jpeg|png)$/i',
+			'done' => "js:function (e, data) {
+				location.reload(true);
+				//console.log(data);
+				return false;
+			}"
+		)
+	) );
 
 	$gridDataProvider = $images->search ();
 	$this->widget ( 'booster.widgets.TbExtendedGridView', array (
@@ -78,49 +84,8 @@ if (! $model->isNewRecord) {
 		)
 	) );
 }
-?>
 
-<?php $this->endWidget(); ?>
-<?php
+Yii::app ()->clientScript->registerScript ( "asyncUload", $script, CClientScript::POS_READY );
 
-if (! $model->isNewRecord) {
 
-	$this->beginWidget ( 'zii.widgets.jui.CJuiDialog', array (
-		'id' => 'mydialog',
-		// additional javascript options for the dialog plugin
-		'options' => array (
-			'title' => 'Нова картинка',
-			'autoOpen' => false,
-			// 'height'=>250,
-			'width' => 500,
-			'buttons' => array (
-				array (
-					'text' => 'Зареди',
-					'click' => 'js:function(){$("#images-form").submit();}'
-				),
-				array (
-					'text' => 'Откажи',
-					'click' => 'js:function(){$(this).dialog("close");}'
-				)
-			)
-		)
-	) );
-	$form = $this->beginWidget ( 'booster.widgets.TbActiveForm', array (
-		// 'htmlOptions'=>array('class'=>'well'),
-		'id' => 'images-form',
-		// 'type'=>'horizontal',
-		'enableAjaxValidation' => false,
-		// 'inlineErrors'=>true,
-		'htmlOptions' => array (
-			'enctype' => 'multipart/form-data'
-		)
-	) );
-	echo $form->textFieldGroup ( $images, 'imageDescription', array (
-		'class' => 'span6'
-	) );
-	echo $form->fileFieldGroup ( $images, 'image' );
-	$this->endWidget ();
 
-	$this->endWidget ( 'zii.widgets.jui.CJuiDialog' );
-}
-?>

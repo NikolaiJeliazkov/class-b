@@ -37,7 +37,8 @@ class GalleriesController extends Controller {
 					'delete',
 					'imageUpdate',
 					'imageDelete',
-					'imagesReorder'
+					'imagesReorder',
+					'uploadImage'
 				),
 				'users' => array (
 					'@'
@@ -71,9 +72,9 @@ class GalleriesController extends Controller {
 		$model = new Galleries ( 'create' );
 		if (isset ( $_POST ['Galleries'] )) {
 			$a = $model->search ()->data;
-// 			$this->trace($a[0]->galleryOrder + 1);exit;
-			$galleryOrder = $a[0]->galleryOrder + 1;
-			$model->galleryOrder = $galleryOrder; //new CDbExpression ( 'select max(galleryOrder)+1 from galleries' );
+			// $this->trace($a[0]->galleryOrder + 1);exit;
+			$galleryOrder = $a [0]->galleryOrder + 1;
+			$model->galleryOrder = $galleryOrder; // new CDbExpression ( 'select max(galleryOrder)+1 from galleries' );
 			$model->galleryDate = new CDbExpression ( 'NOW()' );
 			$model->userId = Yii::app ()->user->id;
 			$model->galleryStatus = 1;
@@ -111,7 +112,7 @@ class GalleriesController extends Controller {
 		if (isset ( $_POST ['Images'] )) {
 			$image = new Images ();
 			$image->galleryId = $model->galleryId;
-			$lastImage = array_pop($image->search ()->data);
+			$lastImage = array_pop ( $image->search ()->data );
 			$imageOrder = $lastImage->imageOrder + 1;
 			$image->imageOrder = $imageOrder;
 			$image->attributes = $_POST ['Images'];
@@ -199,5 +200,62 @@ class GalleriesController extends Controller {
 			echo CActiveForm::validate ( $model );
 			Yii::app ()->end ();
 		}
+	}
+
+	public function actionUploadImage($galleryId) {
+		header ( 'Vary: Accept' );
+		if (isset ( $_SERVER ['HTTP_ACCEPT'] ) && (strpos ( $_SERVER ['HTTP_ACCEPT'], 'application/json' ) !== false)) {
+			header ( 'Content-type: application/json' );
+		} else {
+			header ( 'Content-type: text/plain' );
+		}
+		$data = array ();
+
+		$model = new Images ('upload');
+		$model->galleryId = $galleryId;
+		$lastImage = array_pop ( $model->search ()->data );
+		$imageOrder = $lastImage->imageOrder + 1;
+		$model->imageOrder = $imageOrder;
+		$model->image = CUploadedFile::getInstance ( $model, 'image' );
+		//echo json_encode ( CUploadedFile::getInstance ( $model, 'image' ) );exit;
+		if ($model->image !== null && $model->validate ( array (
+			'image'
+		) )) {
+// 			$model->image->saveAs ( Yii::getPathOfAlias ( 'frontend.www.files' ) . '/' . $model->image->name );
+			$model->imageBaseName = $model->image->name;
+			// save picture name
+			if ($model->save ()) {
+				// return data to the fileuploader
+				$data [] = array (
+					'name' => $model->image->name,
+					'type' => $model->image->type,
+					'size' => $model->image->size,
+					// we need to return the place where our image has been saved
+					'url' => '', //$model->getImageUrl (), // Should we add a helper method?
+					                                // we need to provide a thumbnail url to display on the list
+					                                // after upload. Again, the helper method now getting thumbnail.
+					'thumbnail_url' => '', //$model->getImageUrl ( MyModel::IMG_THUMBNAIL ),
+					// we need to include the action that is going to delete the picture
+					// if we want to after loading
+					'delete_url' => '',
+					'delete_type' => 'POST'
+				);
+			} else {
+				$data [] = array (
+					'error' => 'Unable to save model after saving picture'
+				);
+			}
+		} else {
+			if ($model->hasErrors ( 'image' )) {
+				$data [] = array (
+					'error',
+					$model->getErrors ( 'image' )
+				);
+			} else {
+				throw new CHttpException ( 500, "Could not upload file " . CHtml::errorSummary ( $model ) );
+			}
+		}
+		// JQuery File Upload expects JSON data
+		echo json_encode ( $data );
 	}
 }
