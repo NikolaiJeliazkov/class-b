@@ -131,7 +131,7 @@ WHERE
 				'totalItemCount'=>$count,
 				'sort'=>array(
 						'defaultOrder'=>array(
-								'imageOrder' => CSort::SORT_DESC,
+								'imageOrder' => CSort::SORT_ASC,
 						),
 						'attributes'=>array(
 								'imageOrder',

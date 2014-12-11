@@ -1,9 +1,9 @@
 <?php
 $this->breadcrumbs=array(
-	Yii::t('core', 'Gallery')=>Yii::app()->urlManager->createUrl('gallery'),
-	$m->getTitle(),
+	'Снимки'=>$this->createUrl('/gallery'),
+	$m->galleryTitle,
 );
-$this->pageTitle=$m->getTitle();
+$this->pageTitle=$m->galleryTitle;
 
 YiiUtil::registerCssAndJs('ext.fancyBox',
 '/source/jquery.fancybox.pack.js',
@@ -11,16 +11,16 @@ YiiUtil::registerCssAndJs('ext.fancyBox',
 
 ?>
 <div class="post">
-	<h3 class="title"><?php echo CHtml::link(CHtml::encode($m->ArticleTitle), array('view', 'id'=>$m->GalleryId)); ?></h3>
+	<h3 class="title"><?php echo CHtml::link(CHtml::encode($m->galleryTitle), array('view', 'id'=>$m->galleryId)); ?></h3>
 <?php
 $this->beginWidget('CMarkdown', array('purifyOutput'=>true));
-echo $m->ArticleContent;
+echo $m->galleryText;
 $this->endWidget();
 ?>
 	<div class="thumbs-wrapper clearfix">
 <?php
 $this->widget('zii.widgets.CListView', array(
-		'dataProvider'=>GalleryImage::search($m->GalleryId),
+		'dataProvider'=>GalleryImage::search($m->galleryId),
 		'itemView'=>'_imageItem',
 		'template'=>"{items}",
 		'cssFile'=>false,
