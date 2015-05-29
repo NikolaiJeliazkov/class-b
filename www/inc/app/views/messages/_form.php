@@ -40,6 +40,9 @@ $this->widget('ext.imperavi-redactor-widget.ImperaviRedactorWidget', array(
 		'imageManagerJson' => Yii::app()->createUrl('messages/imageList',array('attr'=>'images')),
 		'imageEditable' => true,
 		'fileUpload' => Yii::app()->createUrl('messages/fileUpload',array('attr'=>'files')),
+		'fileUploadErrorCallback'=>new CJavaScriptExpression(
+				'function(obj,json) { alert(obj.error); }'
+		),
 		'css' => '/css/main.css',
 	),
 ));

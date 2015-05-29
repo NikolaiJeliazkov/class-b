@@ -40,7 +40,8 @@ class FileUpload extends CAction
 		$file=CUploadedFile::getInstanceByName('file');
 		if ($file instanceof CUploadedFile) {
 			$attributePath=$this->uploadPath.DIRECTORY_SEPARATOR.$name.DIRECTORY_SEPARATOR.$attribute;
-			$fileName=$this->sanitizeFilename($file->getName());
+			//$fileName=$this->sanitizeFilename($file->getName());
+			$fileName=$file->getName();
 			if (!is_dir($attributePath)) {
 				if (!mkdir($attributePath,$this->permissions,true)) {
 					throw new CHttpException(500,CJSON::encode(
@@ -48,10 +49,16 @@ class FileUpload extends CAction
 					));
 				}
 			}
-			$path=$attributePath.DIRECTORY_SEPARATOR.$fileName;
-			if (file_exists($path) || !$file->saveAs($path)) {
+			$path=$attributePath.DIRECTORY_SEPARATOR.iconv("UTF-8","WINDOWS-1251",$fileName);
+			if (file_exists($path)) {
+				if (md5_file($path)!=md5_file($file->getTempName())) {
+					throw new CHttpException(500,CJSON::encode(
+						array('error'=>'File already exists: "'.$path.'".')
+					));
+				}
+			} elseif (!$file->saveAs($path)) {
 				throw new CHttpException(500,CJSON::encode(
-					array('error'=>'Could not save file or file exists: "'.$path.'".')
+					array('error'=>'Could not save file: "'.$path.'".')
 				));
 			}
 			$attributeUrl=$this->uploadUrl.'/'.$name.'/'.$attribute.'/'.$fileName;
