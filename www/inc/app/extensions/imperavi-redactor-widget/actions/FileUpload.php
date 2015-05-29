@@ -53,12 +53,12 @@ class FileUpload extends CAction
 			if (file_exists($path)) {
 				if (md5_file($path)!=md5_file($file->getTempName())) {
 					throw new CHttpException(500,CJSON::encode(
-						array('error'=>'File already exists: "'.$path.'".')
+						array('error'=>'File already exists: "'.$attributePath.DIRECTORY_SEPARATOR.$fileName.'".')
 					));
 				}
 			} elseif (!$file->saveAs($path)) {
 				throw new CHttpException(500,CJSON::encode(
-					array('error'=>'Could not save file: "'.$path.'".')
+					array('error'=>'Could not save file: "'.$attributePath.DIRECTORY_SEPARATOR.$fileName.'".')
 				));
 			}
 			$attributeUrl=$this->uploadUrl.'/'.$name.'/'.$attribute.'/'.$fileName;
