@@ -49,7 +49,7 @@ class FileUpload extends CAction
 					));
 				}
 			}
-			$path=$attributePath.DIRECTORY_SEPARATOR.iconv("UTF-8","WINDOWS-1251",$fileName);
+			$path=$attributePath.DIRECTORY_SEPARATOR.$fileName; //iconv("UTF-8","WINDOWS-1251",$fileName);
 			if (file_exists($path)) {
 				if (md5_file($path)!=md5_file($file->getTempName())) {
 					throw new CHttpException(500,CJSON::encode(
