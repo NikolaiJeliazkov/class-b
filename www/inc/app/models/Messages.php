@@ -181,7 +181,8 @@ where
 order by u.userType desc, s.studentOrder
 ';
 		$all=Yii::app()->db->createCommand($sql)->queryAll(true, array(Yii::app()->user->getId()));
-		$q[] = array('id'=>0,'text'=>'Всички');
+		$q[] = array('id'=>-1,'text'=>'Всички');
+		$q[] = array('id'=>0,'text'=>'Всички родители');
 		foreach($all as $u) {
 			$q[] = array('id'=>$u['userId'],'text'=>Users::getUserLabel($u['userId']),'group'=>$userTypes[$u['userType']]);
 		}
@@ -213,8 +214,10 @@ order by u.userType desc, s.studentOrder
 		if ($this->messageTo > 0) {
 			$sql.=" and userId=?";
 			array_push($binds, $this->messageTo);
+		} elseif ($this->messageTo == 0) {
+			$sql.=" and userType=1";
 		} else {
-			//$sql.=" and userType=1";
+
 		}
 		$all=Yii::app()->db->createCommand($sql)->queryAll(true, $binds);
 		if (count($all) == 0) {
